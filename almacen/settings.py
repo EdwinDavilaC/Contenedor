@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#2k)kkgrds7(v@a@5g_aejftz@&b0b+-d&o&#jhh*e4yf=&0)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bandavanoni.com', 'localhost']
+CSRF_TRSTED_ORIGINS = ['https://www.bandavanoni.com']
 
 
 # Application definition
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'almacen.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'almacen',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

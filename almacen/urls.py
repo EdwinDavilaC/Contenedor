@@ -33,7 +33,7 @@ from accounts import urls as usersUrls
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('inicio/', views.inicio, name= "inicio" ),
+    path('', views.inicio, name= "inicio" ),
     path('login/', Login.as_view(), name='login'),
     path('logout/', Logout, name='logout'),    
 

@@ -10,7 +10,7 @@ from Pedidos.models import Pedido, Cliente
 
 admin.site.site_header = "Pedidos Banda Vanoni 2023"
 admin.site.site_title = "Ingrese o modifique su pedido"
-admin.site.site_url = ""
+
 
 @admin.register(Pedido)
 class PedidoAdmin(admin.ModelAdmin):

@@ -67,7 +67,7 @@ class Pedido(models.Model):
     Envio_cliente = models.BooleanField(default=False)
     Acondicionamiento = models.BooleanField(default=False)
     Tipo_acondi = models.CharField('Tipo de acondicionamiento', choices=UM, max_length=30, blank= True,)
-    Cantidad_acond = models.IntegerField('cantidad unidades acondicionamiento')
+    Cantidad_acond = models.IntegerField('cantidad unidades acondicionamiento', blank= True,)
     Cantidad_personas = models.CharField('cantidad personas ingresan a acondi', max_length=2, blank= True)
     Status_prepara = models.BooleanField(default=False)
     Respnsable_prep = models.CharField('Responsable prepa', choices=Responsabl, max_length=30,blank= True,)

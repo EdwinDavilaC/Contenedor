@@ -25,7 +25,7 @@ def inicio(request):
     Karina = Pedidos.filter(Serie_code = 6).filter(Cerrado = False).count()
     Diana = Pedidos.filter(Serie_code = 5).filter(Cerrado = False).count()
     Tahira = Pedidos.filter(Serie_code = 12).filter(Cerrado = False).count()
-    hora_pedidos = Pedidos.filter(Status_Revisado=False).aggregate(Sum('Items_pedido'))['Items_pedido__sum']*7
+    hora_pedidos = Pedidos.filter(Status_Revisado=False).aggregate(Sum('Items_pedido'))['Items_pedido__sum']
     
     
     
